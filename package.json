@@ -1,0 +1,9 @@
+{
+  "name": "tsubasa-music",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist"
+  },
+  "author": "Hash (Wing Score)",
+  "license": "MIT"
+}
