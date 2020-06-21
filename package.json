@@ -2,8 +2,26 @@
   "name": "tsubasa-music",
   "version": "0.0.0",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html dist"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "yarn run build && yarn run export",
+    "type-check": "tsc"
   },
-  "author": "Hash (Wing Score)",
+  "dependencies": {
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^5.1.0",
+    "prettier": "^2.0.5",
+    "typescript": "3.7.3"
+  },
   "license": "MIT"
 }
