@@ -1,10 +1,13 @@
 import styled from "styled-components"
 
 import React from "react"
+
 const Splash = styled.div<{ display: string; opacity: number }>`
   position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
   display: ${(props) => props.display};
   justify-content: center;
   align-items: center;

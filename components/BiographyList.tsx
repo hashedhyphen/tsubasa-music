@@ -29,6 +29,7 @@ const Icon = styled.img`
   height: 100%;
   border: 1px solid #777;
   border-radius: 50%;
+  box-shadow: 0 0 5px #aaa;
 `
 
 const Name = styled.div`

@@ -5,7 +5,9 @@ import Link from "next/link"
 import Head from "next/head"
 
 const Container = styled.div`
+  max-width: 800px;
   min-height: 100vh;
+  margin: 0 auto;
   background-color: #fafafa;
   font-family: "Noto Serif JP", serif;
   font-weight: 400;
@@ -69,6 +71,7 @@ const Layout = ({ children, titlePrefix }: Props) => (
           __html: `
             :root { font-size: 16px; }
             * { box-sizing: border-box; }
+            body { background-color: #fafafa; }
           `,
         }}
       ></style>

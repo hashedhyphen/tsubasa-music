@@ -18,7 +18,7 @@ const Section = styled.section`
 const SectionHeader = styled.h2`
   display: flex;
   align-items: center;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
   width: 2rem;
   font-size: 1.5rem;
   writing-mode: vertical-rl;
