@@ -113,7 +113,7 @@ export function BiographyList() {
           <p>
             大阪拠点のサブカル混声合唱団 "
             <ExternalLink href="https://anising.web.fc2.com/">
-              anixsing
+              ani×sing
             </ExternalLink>
             "（アニシング）主宰指揮者。
           </p>
