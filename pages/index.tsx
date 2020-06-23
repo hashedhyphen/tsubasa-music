@@ -80,6 +80,7 @@ const Notice = styled.p`
   text-align: center;
   padding-bottom: 2rem;
   font-size: 0.8rem;
+  line-height: 1.5;
 `
 
 const IndexPage = () => (
