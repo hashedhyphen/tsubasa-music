@@ -38,7 +38,7 @@ const Layout = ({ children, titlePrefix }: Props) => (
 
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400&amp;display=swap"
       />
       <link rel="stylesheet" href="/css/destyle.css" />
       <style

@@ -1,76 +1,109 @@
 import styled from "styled-components"
 
 import Layout from "../components/Layout"
+import { ConceptArt } from "../components/ConceptArt"
+import { RepertoireList } from "../components/RepertoireList"
 import { SplashScreen } from "../components/SplashScreen"
+import { Title } from "../components/Title"
 
 const Section = styled.section`
-  position: relative;
   width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row-reverse;
 `
 
 const SectionHeader = styled.h2`
-  width: 100%;
-  text-align: center;
-`
-
-const Jumbotron = styled.h1`
-  width: 100%;
-  background-color: #222;
-  color: #ddd;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  font-size: 1.5rem;
   writing-mode: vertical-rl;
+
+  &::before {
+    content: "――";
+  }
 `
 
-const ConceptArt = styled.img`
-  display: block;
+const SectionBody = styled.div`
+  width: calc(100% - 2rem);
+  padding-right: 0.5rem;
+`
+
+const Spacer = styled.div`
+  width: 100%;
+  height: 2rem;
+`
+
+const Biography = styled.article`
   width: 100%;
 `
 
-const Repertoire = styled.li`
-  background-color: #fff;
+const Header = styled.header`
+  width: 100%;
+  height: 5rem;
+`
+
+const IconLink = styled.a`
+  display: inline-block;
+  width: 5rem;
+  height: 100%;
+`
+
+const Icon = styled.img`
+  width: 100%;
+  height: 100%;
+  border: 1px solid #777;
+  border-radius: 50%;
+`
+
+const Name = styled.div`
+  display: inline-block;
+  width: calc(100% - 5rem);
+  height: 100%;
+  padding-left: 0.5rem;
+  vertical-align: top;
+`
+
+const HandleName = styled.p`
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  height: 3rem;
+`
+
+const Role = styled.p`
+  display: flex;
+  align-items: center;
+  height: 2rem;
 `
 
 const IndexPage = () => (
   <Layout>
     <SplashScreen />
-    <Jumbotron>
-      浪白公園音樂團
-      <br />
-      樂劇《つばさミュージック》
-    </Jumbotron>
-    <Section>
-      <SectionHeader>コンセプトアート（絵：もちさとさん）</SectionHeader>
-      <ConceptArt src="/img/concept_art.png" />
-    </Section>
+    <Title />
+    <ConceptArt />
+    <Spacer />
     <Section>
       <SectionHeader>曲目</SectionHeader>
-      <ul>
-        <Repertoire>
-          <p>吹奏樂</p>
-          <p>sugar sweet nightmare</p>
-          <p>編曲・指揮: Hash</p>
-        </Repertoire>
-        <Repertoire>
-          <p>合唱</p>
-          <p>perfect slumbers</p>
-          <p>編曲・指揮: U. Jiro.</p>
-        </Repertoire>
-        <Repertoire>
-          <p>吹奏樂・合唱</p>
-          <p>chocolate insomnia</p>
-          <p>編曲・指揮: Hash</p>
-        </Repertoire>
-      </ul>
+      <SectionBody>
+        <RepertoireList />
+      </SectionBody>
     </Section>
+    <Spacer />
     <Section>
-      <SectionHeader>主宰</SectionHeader>
-      <p>Hash（同人サークル "Wing Score"）</p>
-    </Section>
-    <Section>
-      <SectionHeader>編曲者・指揮者 紹介</SectionHeader>
-      <ul>
-        <li>
-          <p>Hash (@hash_monogatari)</p>
+      <SectionHeader>主宰・編曲者・指揮者紹介</SectionHeader>
+      <SectionBody>
+        <Biography>
+          <Header>
+            <IconLink href="https://twitter.com/hash_monogatari">
+              <Icon src="https://pbs.twimg.com/profile_images/1144978186159054849/WkgpEl9D_400x400.png" />
+            </IconLink>
+            <Name>
+              <HandleName>Hash</HandleName>
+              <Role>主宰・吹奏楽編曲・指揮</Role>
+            </Name>
+          </Header>
           <p>
             羽川さんの平穏を願う同人サークル "Wing Score"
             として、西尾維新作品オンリーイベント「イシンノセカイ」やコミックマーケットにサークル参加。
@@ -82,9 +115,17 @@ const IndexPage = () => (
             昨年の第五回副次的文化系合唱祭では「合唱団〈唱物語〉」の合唱メンバーとして参加し、連作短々編「こよみセットリスト」を執筆。
           </p>
           <p>推しは羽川翼さん。</p>
-        </li>
-        <li>
-          <p>U. Jiro. (@ujiro1000)</p>
+        </Biography>
+        <Biography>
+          <Header>
+            <IconLink href="https://mobile.twitter.com/ujiro1000">
+              <Icon src="https://pbs.twimg.com/profile_images/1245552642928992256/qcvdLrvt_400x400.jpg" />
+            </IconLink>
+            <Name>
+              <HandleName>U. Jiro.</HandleName>
+              <Role>合唱編曲・指揮</Role>
+            </Name>
+          </Header>
           <p>
             大阪拠点のサブカル混声合唱団 "anixsing"（アニシング）主宰指揮者。
           </p>
@@ -92,8 +133,8 @@ const IndexPage = () => (
             その他にも様々なサブカル合唱の編曲・指揮活動を精力的に手掛け、昨年の第五回副次的文化系合唱祭では「合唱団〈唱物語〉」において「混声合唱メドレー〈唱物語〉」の編曲・指揮を務め、好評を博す。
           </p>
           <p>推しは阿良々木月火ちゃん。</p>
-        </li>
-      </ul>
+        </Biography>
+      </SectionBody>
     </Section>
     <Section>
       <SectionHeader>企画趣旨</SectionHeader>
