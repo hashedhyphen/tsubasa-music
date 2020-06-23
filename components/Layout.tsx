@@ -42,7 +42,22 @@ const Layout = ({ children, titlePrefix }: Props) => (
       <title>{buildTitle(titlePrefix)}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="robots" content="noindex" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@XXXXParkOrche" />
+      <meta property="og:url" content="https://music.羽川翼.com/" />
+      <meta
+        property="og:title"
+        content="浪白公園音樂團 樂劇《つばさミュージック》ポータルサイト"
+      />
+      <meta
+        property="og:description"
+        content="青春は、君の朝（あした）に目を覚ます。朗讀✕合唱✕吹奏樂。一日限リ無形合同作品。"
+      />
+      <meta
+        property="og:image"
+        content="https://music.羽川翼.com/img/ogp.png"
+      />
 
       <link
         rel="stylesheet"
