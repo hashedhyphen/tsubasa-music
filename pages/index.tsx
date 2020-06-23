@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import Layout from "../components/Layout"
+import { SplashScreen } from "../components/SplashScreen"
 
 const Section = styled.section`
   position: relative;
@@ -31,6 +32,7 @@ const Repertoire = styled.li`
 
 const IndexPage = () => (
   <Layout>
+    <SplashScreen />
     <Jumbotron>
       浪白公園音樂團
       <br />
