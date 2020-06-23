@@ -105,8 +105,7 @@ export class SplashScreen extends React.Component<{}, State> {
           <br />
           君の
           <ruby>
-            <rb>朝</rb>
-            <RubyText>あした</RubyText>
+            朝<RubyText>あした</RubyText>
           </ruby>
           に<br />
           目を覚ま<BeforePunct>す</BeforePunct>。
