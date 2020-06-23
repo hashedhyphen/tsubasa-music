@@ -80,7 +80,7 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
                 合唱演奏はマスクを着用した状態で行います。ただし、可能な限りブレスや演奏を妨げないマスクの着用を目指します。
               </p>
@@ -120,7 +120,7 @@ const Page = () => (
               加えて検温時に健康状態を口頭確認し、体調不良が認められた場合には、当日の参加をお断りします。
             </li>
             <li>
-              当日から 14 日以内について、海外の感染流行国（補足1.
+              当日から 14 日以内について、海外の感染流行国（補足 1.
               で定義）へ渡航歴がないこと、新型コロナウイルス感染症陽性者と濃厚接触がないことを検温時に口頭確認します。
             </li>
             <li>
@@ -130,7 +130,7 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
                 感染流行国とは、外務省がレベル 1
                 以上の感染症危険情報を発出している国とします。
@@ -145,14 +145,14 @@ const Page = () => (
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 2.</SubListItemHeader>
+              <SubListItemHeader>補足 2.</SubListItemHeader>
               <p>
                 体温計が 1
                 台のため、検温を待機する人の密度が大きくならないよう、集合時刻の分散を検討します。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 3.</SubListItemHeader>
+              <SubListItemHeader>補足 3.</SubListItemHeader>
               <p>
                 参加者が遅刻する場合を想定し、検温を行う待機場所を事前に周知します。
               </p>
@@ -177,19 +177,19 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
                 氏名と電話番号を収集するのは、使用施設のガイドラインに準拠しています。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 2.</SubListItemHeader>
+              <SubListItemHeader>補足 2.</SubListItemHeader>
               <p>
                 情報を「当日の会場において」収集するのは、保管する個人情報を必要最小限にするためです。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 3.</SubListItemHeader>
+              <SubListItemHeader>補足 3.</SubListItemHeader>
               <p>
                 情報を「オンラインな方法で」収集するのは、収集時の不要な接触を避けるためです。
               </p>
@@ -206,13 +206,13 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
                 スワブを使用した際などは特別な注意を払い、休憩時などに手指消毒することを推奨します。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 2.</SubListItemHeader>
+              <SubListItemHeader>補足 2.</SubListItemHeader>
               <p>
                 床面の清掃・消毒については、土足による利用、かつ床に落ちた飛沫が再び空気中に舞うことは考えにくいといった側面を踏まえつつ、使用施設の意向に従います。
               </p>
@@ -235,13 +235,13 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
                 ここでの「舞台設営」とは、ひな壇の組み立て、打楽器・アンプの配置、椅子・譜面台の配置を想定しています。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 2.</SubListItemHeader>
+              <SubListItemHeader>補足 2.</SubListItemHeader>
               <p>
                 設営作業後に手指消毒を行うため、手袋の着用は特に強制しません
               </p>
@@ -265,13 +265,13 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
                 参加者間の距離「1m」は使用施設を含む様々な公共施設のガイドラインを参考にしています。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 2.</SubListItemHeader>
+              <SubListItemHeader>補足 2.</SubListItemHeader>
               <p>
                 ベンチを左右に 1
                 席以上空ける、向かい合わずに使用することは、様々な公共施設や商業施設で行われている対策を参考にしています。
@@ -289,14 +289,14 @@ const Page = () => (
 
           <SubList>
             <SubListItem>
-              <SubListItemHeader>備考 1.</SubListItemHeader>
+              <SubListItemHeader>補足 1.</SubListItemHeader>
               <p>
-                「消毒について
-                補足1.」で述べたように、床面の消毒については特に考えていないため、いわゆる「バケツ」の使用を強制することは考えていません。
+                「消毒について 補足
+                1.」で述べたように、床面の消毒については特に考えていないため、いわゆる「バケツ」の使用を強制することは考えていません。
               </p>
             </SubListItem>
             <SubListItem>
-              <SubListItemHeader>備考 2.</SubListItemHeader>
+              <SubListItemHeader>補足 2.</SubListItemHeader>
               <p>
                 息を吹き込みながら行う水滴処理は可能な限り避けるよう参加者に周知します。必要不可欠な場合は開口部を布で覆うなど、可能な限り飛沫の拡散防止に努めるよう参加者に周知します。
               </p>
