@@ -10,6 +10,7 @@ import {
 } from "../../components/Recruitment"
 import { Navigation, NavigationButton } from "../../components/Navigation"
 import { Important } from "../../components/Important"
+import { ExternalLink } from "../../components/ExternalLink"
 
 const LeadPara = styled.p`
   padding-top: 1rem;
@@ -43,12 +44,6 @@ const SubListItem = styled.li`
 `
 
 const SubListItemHeader = styled.p``
-
-const ExternalLink = styled.a`
-  line-height: 1;
-  font-size: 0.9rem;
-  text-decoration: underline #aaa;
-`
 
 const Page = () => (
   <Layout titlePrefix="募集要項 003">

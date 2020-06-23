@@ -9,6 +9,7 @@ import {
   RecruitmentBody,
 } from "../../components/Recruitment"
 import { Navigation, NavigationButton } from "../../components/Navigation"
+import { ExternalLink } from "../../components/ExternalLink"
 
 const DefHeader = styled.h3`
   display: inline-block;
@@ -55,12 +56,6 @@ const Instrument = styled.li`
     color: #555;
     font-size: 0.9rem;
   }
-`
-
-const ExternalLink = styled.a`
-  line-height: 1;
-  font-size: 0.9rem;
-  text-decoration: underline #aaa;
 `
 
 const Page = () => (

@@ -11,16 +11,24 @@ const Container = styled.div`
   font-weight: 400;
 `
 
+const Main = styled.div`
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+`
+
 const Footer = styled.footer`
   position: relative;
-  height: 3rem;
+  margin-top: 2rem;
+  height: 5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #444;
   color: #eee;
   text-align: center;
   font-size: 0.9rem;
+  line-height: 2;
 `
 
 type Props = {
@@ -66,9 +74,10 @@ const Layout = ({ children, titlePrefix }: Props) => (
       ></script>
     </Head>
 
-    {children}
+    <Main>{children}</Main>
 
     <Footer>
+      <p>&copy; 2020 浪白公園音樂團</p>
       <Link href="/privacy">
         <a>プライバシーポリシー</a>
       </Link>
