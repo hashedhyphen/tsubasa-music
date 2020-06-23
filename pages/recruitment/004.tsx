@@ -66,10 +66,7 @@ const Page = () => (
             </Link>
           </NavigationButton>
           <NavigationButton>
-            <a
-              target="blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe-RBiTXJsobncHPnZoIzNIZ7TR-v62YYSa2RBJK0AJL4aaZg/viewform"
-            >
+            <a target="blank" href="#">
               応募フォームへ ▷
             </a>
           </NavigationButton>

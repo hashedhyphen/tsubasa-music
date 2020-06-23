@@ -24,6 +24,7 @@ const Caption = styled.figcaption`
   letter-spacing: 0.1rem;
   text-indent: 0.1rem;
   line-height: 1.5;
+  background-color: #fff;
   color: #444;
 `
 

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Outer = styled.div`
   width: 100%;
-  padding: 6rem 0;
+  padding: 2rem 0;
   text-align: center;
 `
 

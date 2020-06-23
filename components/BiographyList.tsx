@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { ExternalLink } from "./ExternalLink"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -47,7 +48,8 @@ const HandleName = styled.p`
 
 const Role = styled.p`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   height: 2.5rem;
 `
 
@@ -69,7 +71,10 @@ export function BiographyList() {
           </IconLink>
           <Name>
             <HandleName>Hash</HandleName>
-            <Role>主宰・吹奏楽編曲・指揮</Role>
+            <Role>
+              <p>主宰・吹奏楽編曲・指揮</p>
+              <p>朗読脚本</p>
+            </Role>
           </Name>
         </Header>
         <Body>
@@ -81,14 +86,22 @@ export function BiographyList() {
             また、サブカル系の吹奏楽イベント・演奏会において演奏活動を行う傍ら、編曲活動も行う。
           </p>
           <p>
-            昨年の第五回副次的文化系合唱祭では「合唱団〈唱物語〉」の合唱メンバーとして参加し、連作短々編「こよみセットリスト」を執筆。
+            昨年の第五回副次的文化系合唱祭では「
+            <ExternalLink href="https://twitter.com/fkjUtaumono">
+              合唱団〈唱物語〉
+            </ExternalLink>
+            」の合唱メンバーとして参加し、連作短々編「
+            <ExternalLink href="https://www.pixiv.net/novel/series/1164022">
+              こよみセットリスト
+            </ExternalLink>
+            」を執筆。
           </p>
           <p>推しは羽川翼さん。</p>
         </Body>
       </Biography>
       <Biography>
         <Header>
-          <IconLink href="https://mobile.twitter.com/ujiro1000">
+          <IconLink href="https://twitter.com/ujiro1000">
             <Icon src="https://pbs.twimg.com/profile_images/1245552642928992256/qcvdLrvt_400x400.jpg" />
           </IconLink>
           <Name>
@@ -98,10 +111,18 @@ export function BiographyList() {
         </Header>
         <Body>
           <p>
-            大阪拠点のサブカル混声合唱団 "anixsing"（アニシング）主宰指揮者。
+            大阪拠点のサブカル混声合唱団 "
+            <ExternalLink href="https://anising.web.fc2.com/">
+              anixsing
+            </ExternalLink>
+            "（アニシング）主宰指揮者。
           </p>
           <p>
-            その他にも様々なサブカル合唱の編曲・指揮活動を精力的に手掛け、昨年の第五回副次的文化系合唱祭では「合唱団〈唱物語〉」において「混声合唱メドレー〈唱物語〉」の編曲・指揮を務め、好評を博す。
+            その他にも様々なサブカル合唱の編曲・指揮活動を精力的に手掛け、昨年の第五回副次的文化系合唱祭では「
+            <ExternalLink href="https://twitter.com/fkjUtaumono">
+              合唱団〈唱物語〉
+            </ExternalLink>
+            」において「混声合唱メドレー〈唱物語〉」の編曲・指揮を務め、好評を博す。
           </p>
           <p>推しは阿良々木月火ちゃん。</p>
         </Body>
