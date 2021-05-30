@@ -10,11 +10,11 @@ const Repertoire = styled.li`
 
 const SongTitle = styled.p`
   padding-bottom: 0.3rem;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 `
 
 const SongMeta = styled.p`
-  padding-left: 1rem;
+  color: #666;
 `
 
 export function RepertoireList() {
@@ -22,7 +22,7 @@ export function RepertoireList() {
     <ul>
       <Repertoire>
         <SongTitle>sugar sweet nightmare</SongTitle>
-        <SongMeta>吹奏樂（編曲・指揮：Hash）</SongMeta>
+        <SongMeta>吹奏楽（編曲・指揮：Hash）</SongMeta>
       </Repertoire>
       <Repertoire>
         <SongTitle>perfect slumbers</SongTitle>
@@ -30,7 +30,7 @@ export function RepertoireList() {
       </Repertoire>
       <Repertoire>
         <SongTitle>chocolate insomnia</SongTitle>
-        <SongMeta>吹奏樂・合唱（編曲・指揮：Hash）</SongMeta>
+        <SongMeta>朗読・合唱・吹奏楽（編曲・指揮：Hash）</SongMeta>
       </Repertoire>
     </ul>
   )
