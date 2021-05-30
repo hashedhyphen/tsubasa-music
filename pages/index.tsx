@@ -3,8 +3,8 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import { BiographyList } from "../components/BiographyList"
 import { ConceptArt } from "../components/ConceptArt"
-import { ExternalLink } from "../components/ExternalLink"
 import { RepertoireList } from "../components/RepertoireList"
+import { ScheduleList } from "../components/ScheduleList"
 import { SplashScreen } from "../components/SplashScreen"
 import { Title } from "../components/Title"
 
@@ -12,7 +12,6 @@ const Section = styled.section`
   width: 100%;
   padding: 0 1rem;
   display: flex;
-  flex-direction: row-reverse;
 `
 
 const SectionHeader = styled.h2`
@@ -28,7 +27,7 @@ const SectionHeader = styled.h2`
 
 const SectionBody = styled.div`
   width: calc(100% - 2rem);
-  padding-right: 0.5rem;
+  padding-left: 0.8rem;
 `
 
 const Spacer = styled.div`
@@ -83,6 +82,11 @@ const Notice = styled.p`
   line-height: 1.5;
 `
 
+const TwitterWrapper = styled.div`
+  height: 30rem;
+  overflow: scroll;
+`
+
 const IndexPage = () => (
   <Layout>
     <SplashScreen />
@@ -122,6 +126,15 @@ const IndexPage = () => (
     <Spacer />
 
     <Section>
+      <SectionHeader>日程</SectionHeader>
+      <SectionBody>
+        <ScheduleList />
+      </SectionBody>
+    </Section>
+
+    <Spacer />
+
+    <Section>
       <SectionHeader>主宰・編曲者・指揮者紹介</SectionHeader>
       <SectionBody>
         <BiographyList />
@@ -151,21 +164,21 @@ const IndexPage = () => (
     <Spacer />
 
     <Section>
-      <SectionHeader>お知らせ</SectionHeader>
+      <SectionHeader>Twitter</SectionHeader>
       <SectionBody>
-        <Paragraphs>
-          <p>
-            当初、企画開催日を 2020-08-29
-            とさせていただいておりましたが、諸般の事情につき、現在日程を無期限延期させていただいております。
-          </p>
-          <p>
-            奏者募集の再開については
-            <ExternalLink href="https://twitter.com/XXXXParkOrche">
-              Twitter
-            </ExternalLink>
-            でお知らせいたします。
-          </p>
-        </Paragraphs>
+        <TwitterWrapper>
+          <a
+            className="twitter-timeline"
+            href="https://twitter.com/XXXXParkOrche?ref_src=twsrc%5Etfw"
+          >
+            Tweets by XXXXParkOrche
+          </a>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charSet="utf-8"
+          ></script>
+        </TwitterWrapper>
       </SectionBody>
     </Section>
   </Layout>
