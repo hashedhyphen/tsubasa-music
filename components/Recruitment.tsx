@@ -8,16 +8,16 @@ export const RecruitmentContainer = styled.div`
 export const RecruitmentSideHeader = styled.h2`
   position: fixed;
   top: 0;
-  right: 0;
-  width: 2.5rem;
+  left: 0;
+  width: 2rem;
   height: 100vh;
-  padding-top: 4rem;
+  padding-top: 0.6rem;
   display: flex;
   align-items: center;
   writing-mode: vertical-rl;
   background: linear-gradient(#eee, #fff);
   color: #555;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `
 
 export const RecruitmentTopHeader = styled.h3`
@@ -28,6 +28,8 @@ export const RecruitmentTopHeader = styled.h3`
 
 export const RecruitmentBody = styled.div`
   position: relative;
-  width: calc(100% - 2.5rem);
+  top: 0;
+  left: 2rem;
+  width: calc(100% - 2rem);
   padding: 0.5rem 0.5rem 0 0.5rem;
 `

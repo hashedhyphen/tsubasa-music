@@ -58,6 +58,11 @@ const Instrument = styled.li`
   }
 `
 
+const PriceHeader = styled.span`
+  display: inline-block;
+  width: 5rem;
+`
+
 const Page = () => (
   <Layout titlePrefix="募集要項 001">
     <RecruitmentContainer>
@@ -65,20 +70,28 @@ const Page = () => (
       <RecruitmentBody>
         <RecruitmentTopHeader>企画概要</RecruitmentTopHeader>
         <RecruitmentSection>
-          <DefHeader>主催</DefHeader>
+          <DefHeader>主宰</DefHeader>
           <DefContent>
             <p>Hash (Wing Score)</p>
             <p>
               (
-              <ExternalLink href="https://twitter.com/hash_monogatari">
-                @hash_monogatari
+              <ExternalLink
+                href="https://twitter.com/hashedhyphen"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                @hashedhyphen
               </ExternalLink>
               )
             </p>
             <p>
               (
-              <ExternalLink href="https://twitter.com/hashedhyphen">
-                @hashedhyphen
+              <ExternalLink
+                href="https://twitter.com/hash_monogatari"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                @hash_monogatari
               </ExternalLink>
               )
             </p>
@@ -87,33 +100,47 @@ const Page = () => (
         <RecruitmentSection>
           <DefHeader>日程</DefHeader>
           <DefContent>
-            <time dateTime="2020-08-29">2020 年 8 月 29 日（土）</time>日中
+            <ul>
+              <li>
+                <time dateTime="2022-02-19">2022-02-19</time>（合唱）
+              </li>
+              <li>
+                <time dateTime="2022-03-06">2022-03-06</time>（吹奏楽）
+              </li>
+              <li>
+                <time dateTime="2022-03-21">2022-03-21</time>（合唱・吹奏楽）
+              </li>
+            </ul>
           </DefContent>
         </RecruitmentSection>
         <RecruitmentSection>
           <DefHeader>会場</DefHeader>
           <DefContent>
-            <p>1 都 3 県内某所（参加者にのみ開示）</p>
-            <p>※合唱パートのみ午前・午後間で移動があります。</p>
+            <p>関東 1 都 3 県内某所</p>
+            <p>※参加者にのみ開示</p>
           </DefContent>
         </RecruitmentSection>
         <RecruitmentSection>
           <DefHeader>参加費</DefHeader>
           <DefContent>
-            <p>3,000 円</p>
+            <ul>
+              <li>
+                <PriceHeader>吹奏楽</PriceHeader>：5,000 円
+              </li>
+              <li>
+                <PriceHeader>合唱</PriceHeader>：3,000 円
+              </li>
+              <li>
+                <PriceHeader>高校生以下</PriceHeader>：3,000 円
+              </li>
+            </ul>
             <ul>
               <ListItem>
-                情勢の不確実性を考慮し、イベント当日に集金させていただきます（集金時に混雑が発生しないよう工夫いたします）。
+                情勢の不確実性を考慮し、最終日 3/21
+                に集金させていただきます（集金時に混雑が発生しないよう工夫いたします）。
               </ListItem>
               <ListItem>
-                金額は参加人数等により変動いたします（やむを得ず予定より増える可能性もございますのでご了承ください）。
-              </ListItem>
-              <ListItem>
-                会場費・打楽器レンタル・楽譜編集に関わる費用等に充てさせていただきます。
-              </ListItem>
-              <ListItem>
-                合唱パートは午前・午後で会場が異なるため、移動の交通費（バスの場合
-                420 円）を別途ご負担いただきます。あらかじめご了承ください。
+                会場費・打楽器レンタル・著作権使用料等に充てさせていただきます。
               </ListItem>
             </ul>
           </DefContent>
@@ -123,7 +150,7 @@ const Page = () => (
             現在の募集ステータス
           </RecruitmentSectionHeader>
           <RecruitmentSectionBody>
-            <p>一次募集（～yyyy/mm/p）</p>
+            <p>一次募集（～yyyy/mm/dd）</p>
             <p>
               ※先着順ではありません。募集期間終了後、参加の可否を運営よりメールでご連絡いたします。
             </p>
@@ -133,22 +160,21 @@ const Page = () => (
           <RecruitmentSectionHeader>募集パート</RecruitmentSectionHeader>
           <RecruitmentSectionBody>
             <p>
-              編曲と企画運営の都合上、合唱とその他パートの兼任はできません。
+              吹奏楽奏者は 2/19 の "perfect slumbers"
+              合唱レコーディングへ参加可能です（参加費据え置き）。
             </p>
             <InstrumentList>
               <Instrument>合唱（SATB）</Instrument>
-              <Instrument>Piccolo</Instrument>
-              <Instrument>Flute</Instrument>
+              <Instrument>Piccolo / Flute</Instrument>
               <Instrument>Oboe</Instrument>
               <Instrument>Basson</Instrument>
-              <Instrument>Clarinet（E♭・B♭・Bass）</Instrument>
-              <Instrument>Saxphone（Alto・Tenor・Bari.）</Instrument>
+              <Instrument>Clarinet（B♭・Bass）</Instrument>
+              <Instrument>Saxophone（Alto・Tenor・Bari.）</Instrument>
               <Instrument>Trumpet</Instrument>
               <Instrument>Horn</Instrument>
               <Instrument>Trombone（Tenor・Bass）</Instrument>
               <Instrument>Euphonium</Instrument>
               <Instrument>Tuba</Instrument>
-              <Instrument>Contrabass</Instrument>
               <Instrument>Percussion（Drums 以外）</Instrument>
             </InstrumentList>
           </RecruitmentSectionBody>
