@@ -35,9 +35,7 @@ const Page = () => {
   const [emailAddress, setEmailAddress] = useState("api-test-x@example.com");
   
   const router = useRouter();
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleSubmit = (_e: FormEvent) => {
     router.push('/thanks')
   };
 
@@ -50,6 +48,7 @@ const Page = () => {
             method="POST"
             action={GFORM_URI_PATH}
             onSubmit={handleSubmit}
+            target="dummy"
           >
             <input readOnly type="text" name="entry.817046770" value="Hash" />
             <input
@@ -82,6 +81,7 @@ const Page = () => {
             />
             <button type="submit">送信</button>
           </form>
+          <iframe name="dummy"></iframe>
         </RecruitmentBody>
       </RecruitmentContainer>
     </Layout>
