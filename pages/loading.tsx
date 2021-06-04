@@ -17,12 +17,13 @@ const Header = styled.h1`
 export default function () {
   useEffect(() => {
     window.opener.location = "/thanks"
-    window.close()
+    const wait = 2 * 1000 // [msec]
+    setTimeout(() => window.close(), wait)
   })
   return (
-    <Layout titlePrefix="参加申込受付中">
+    <Layout titlePrefix="受付処理中……">
       <HeaderWrapper>
-        <Header>参加申込受付中</Header>
+        <Header>受付処理中……</Header>
       </HeaderWrapper>
     </Layout>
   )
