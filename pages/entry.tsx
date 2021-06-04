@@ -40,7 +40,7 @@ const Page = () => {
           <form
             method="POST"
             action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
-            onSubmit={() => window.open("/loading", "_blank", "rel=opener")}
+            onSubmit={() => window.open("/loading")}
           >
             <input readOnly type="text" name="entry.817046770" value="Hash" />
             <input
