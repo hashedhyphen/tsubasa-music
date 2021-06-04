@@ -1,4 +1,5 @@
-import { useState } from "react"
+import React, { FormEvent, useState} from "react"; 
+import { useRouter } from "next/router";
 
 import Layout from "../components/Layout"
 import {
@@ -14,7 +15,6 @@ entry.1399057616: @hashedhyphen
 entry.1272048879: 27
 entry.330848135: 2
 entry.2120967444: B♭Clarinet
-その他
 entry.1432922972: 〈唱物語〉
 entry.1009972677: Bass（合唱）
 entry.1346686968: はい
@@ -29,8 +29,17 @@ method="POST"
 action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
 */
 
+const GFORM_URI_PATH = "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
+
 const Page = () => {
-  const [emailAddress, setEmailAddress] = useState("api-test-x@example.com")
+  const [emailAddress, setEmailAddress] = useState("api-test-x@example.com");
+  
+  const router = useRouter();
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    router.push('/thanks')
+  };
 
   return (
     <Layout titlePrefix="参加申込フォーム">
@@ -39,8 +48,8 @@ const Page = () => {
         <RecruitmentBody>
           <form
             method="POST"
-            action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
-            onSubmit={() => window.open("/loading", "_blank", "rel=opener")}
+            action={GFORM_URI_PATH}
+            onSubmit={handleSubmit}
           >
             <input readOnly type="text" name="entry.817046770" value="Hash" />
             <input
