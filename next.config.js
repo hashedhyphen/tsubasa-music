@@ -5,11 +5,14 @@ module.exports = {
   ) {
     return {
       "/": { page: "/" },
+      "/entry": { page: "/entry" },
+      "/loading": { page: "/loading" },
       "/privacy": { page: "/privacy" },
-      "/recruitment/001": { page: "/recruitment/001" },
-      "/recruitment/002": { page: "/recruitment/002" },
-      "/recruitment/003": { page: "/recruitment/003" },
-      "/recruitment/004": { page: "/recruitment/004" },
+      "/thanks": { page: "/thanks" },
+      "/requirements/001": { page: "/requirements/001" },
+      "/requirements/002": { page: "/requirements/002" },
+      "/requirements/003": { page: "/requirements/003" },
+      "/requirements/004": { page: "/requirements/004" },
     }
   },
 }
