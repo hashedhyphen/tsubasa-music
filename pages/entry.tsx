@@ -1,5 +1,5 @@
-import React, { FormEvent, useState} from "react"; 
-import { useRouter } from "next/router";
+import React, { FormEvent, useState } from "react"
+import { useRouter } from "next/router"
 
 import Layout from "../components/Layout"
 import {
@@ -8,36 +8,18 @@ import {
   RecruitmentBody,
 } from "../components/Recruitment"
 
-/*
-content-type: application/x-www-form-urlencoded
-entry.817046770: Hash
-entry.1399057616: @hashedhyphen
-entry.1272048879: 27
-entry.330848135: 2
-entry.2120967444: B♭Clarinet
-entry.1432922972: 〈唱物語〉
-entry.1009972677: Bass（合唱）
-entry.1346686968: はい
-emailAddress: me@hashedhyphen.com
-entry.1346686968_sentinel:
-fvv: 1
-draftResponse: [null,null,"-2070866045266500232"]
-pageHistory: 0
-fbzx: -2070866045266500232
+const GFORM_URI_PATH =
+  "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
 
-method="POST"
-action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
-*/
-
-const GFORM_URI_PATH = "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
+const DUMMY_IFRAME_NAME = "dummy"
 
 const Page = () => {
-  const [emailAddress, setEmailAddress] = useState("api-test-x@example.com");
-  
-  const router = useRouter();
+  const [emailAddress, setEmailAddress] = useState("api-test-x@example.com")
+
+  const router = useRouter()
   const handleSubmit = (_e: FormEvent) => {
-    router.push('/thanks')
-  };
+    router.push("/thanks")
+  }
 
   return (
     <Layout titlePrefix="参加申込フォーム">
@@ -48,7 +30,7 @@ const Page = () => {
             method="POST"
             action={GFORM_URI_PATH}
             onSubmit={handleSubmit}
-            target="dummy"
+            target={DUMMY_IFRAME_NAME}
           >
             <input readOnly type="text" name="entry.817046770" value="Hash" />
             <input
@@ -63,12 +45,8 @@ const Page = () => {
               readOnly
               name="entry.2120967444"
               value="B♭Clarinet その他"
-            ></textarea>
-            <textarea
-              readOnly
-              name="entry.1432922972"
-              value="〈唱物語〉"
-            ></textarea>
+            />
+            <textarea readOnly name="entry.1432922972" value="〈唱物語〉" />
             <select name="entry.1009972677" value="Bass（合唱）">
               <option value="Bass（合唱）">Bass（合唱）</option>
             </select>
@@ -81,7 +59,7 @@ const Page = () => {
             />
             <button type="submit">送信</button>
           </form>
-          <iframe name="dummy"></iframe>
+          <iframe name={DUMMY_IFRAME_NAME} />
         </RecruitmentBody>
       </RecruitmentContainer>
     </Layout>
