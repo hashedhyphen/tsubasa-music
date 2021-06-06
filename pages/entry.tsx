@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import React, { useState } from "react"
+import Link from "next/Link"
 import { useRouter } from "next/router"
 import {
   Button,
@@ -17,6 +18,14 @@ import {
   RecruitmentBody,
 } from "../components/Recruitment"
 import { theme } from "../lib/theme"
+
+const LinkWrapper = styled.span`
+  padding: 0 0.2rem;
+
+  & > a {
+    text-decoration: underline;
+  }
+`
 
 const FormItemWrapper = styled.div`
   padding-bottom: 1rem;
@@ -56,7 +65,7 @@ const PART_NAMES = [
   "Flute",
   "Oboe",
   "Basson",
-  "Clarinet（並管）",
+  "B♭ Clarinet",
   "Bass Clarinet",
   "Alto Saxophone",
   "Tenor Saxophone",
@@ -100,6 +109,13 @@ const Page = () => {
         <RecruitmentContainer>
           <RecruitmentSideHeader>参加申込フォーム</RecruitmentSideHeader>
           <RecruitmentBody>
+            <p>
+              事前に
+              <LinkWrapper>
+                <Link href="requirements/001">参加要項</Link>
+              </LinkWrapper>
+              をよくお読みください。
+            </p>
             <form
               method="POST"
               action={GFORM_URI_PATH}
