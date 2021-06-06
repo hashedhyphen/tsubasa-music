@@ -8,7 +8,6 @@ import {
   MenuItem,
   TextField,
   ThemeProvider,
-  createMuiTheme,
 } from "@material-ui/core"
 
 import Layout from "../components/Layout"
@@ -17,6 +16,7 @@ import {
   RecruitmentSideHeader,
   RecruitmentBody,
 } from "../components/Recruitment"
+import { theme } from "../lib/theme"
 
 const FormItemWrapper = styled.div`
   padding-bottom: 1rem;
@@ -70,12 +70,6 @@ const PART_NAMES = [
   "Electric Bass",
 ]
 
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: '"Noto Serif JP", serif',
-  },
-})
-
 const Page = () => {
   const router = useRouter()
 
@@ -101,17 +95,17 @@ const Page = () => {
   }
 
   return (
-    <Layout titlePrefix="参加申込フォーム">
-      <RecruitmentContainer>
-        <RecruitmentSideHeader>参加申込フォーム</RecruitmentSideHeader>
-        <RecruitmentBody>
-          <form
-            method="POST"
-            action={GFORM_URI_PATH}
-            target={DUMMY_IFRAME_NAME}
-            onSubmit={(_evt) => router.push("/thanks")}
-          >
-            <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Layout titlePrefix="参加申込フォーム">
+        <RecruitmentContainer>
+          <RecruitmentSideHeader>参加申込フォーム</RecruitmentSideHeader>
+          <RecruitmentBody>
+            <form
+              method="POST"
+              action={GFORM_URI_PATH}
+              target={DUMMY_IFRAME_NAME}
+              onSubmit={(_evt) => router.push("/thanks")}
+            >
               <FormItemWrapper>
                 <TextField
                   required
@@ -230,12 +224,12 @@ const Page = () => {
                   </Button>
                 </ButtonWrapper>
               </FormItemWrapper>
-            </ThemeProvider>
-          </form>
-          <iframe name={DUMMY_IFRAME_NAME} />
-        </RecruitmentBody>
-      </RecruitmentContainer>
-    </Layout>
+            </form>
+            <iframe name={DUMMY_IFRAME_NAME} />
+          </RecruitmentBody>
+        </RecruitmentContainer>
+      </Layout>
+    </ThemeProvider>
   )
 }
 
