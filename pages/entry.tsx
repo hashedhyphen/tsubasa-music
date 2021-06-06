@@ -7,6 +7,8 @@ import {
   FormControlLabel,
   MenuItem,
   TextField,
+  ThemeProvider,
+  createMuiTheme,
 } from "@material-ui/core"
 
 import Layout from "../components/Layout"
@@ -28,6 +30,16 @@ const FormItemWrapper = styled.div`
 const ButtonWrapper = styled.div`
   width: 100%;
   text-align: center;
+`
+
+const CheckboxWrapper = styled.div`
+  width: 100%;
+
+  // monkey patch
+  & input {
+    position: absolute;
+    visibility: hidden;
+  }
 `
 
 const GFORM_URI_PATH =
@@ -58,6 +70,12 @@ const PART_NAMES = [
   "Electric Bass",
 ]
 
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: '"Noto Serif JP", serif',
+  },
+})
+
 const Page = () => {
   const router = useRouter()
 
@@ -72,7 +90,14 @@ const Page = () => {
   const [agreed, setAgreed] = useState(false)
 
   function canSubmit() {
-    return agreed
+    return (
+      handleName !== "" &&
+      emailAddress !== "" &&
+      age !== "" &&
+      part !== "" &&
+      experience !== "" &&
+      agreed
+    )
   }
 
   return (
@@ -86,119 +111,126 @@ const Page = () => {
             target={DUMMY_IFRAME_NAME}
             onSubmit={(_evt) => router.push("/thanks")}
           >
-            <FormItemWrapper>
-              <TextField
-                required
-                id="handle-name"
-                name="entry.817046770"
-                label="ハンドルネーム"
-                value={handleName}
-                onChange={(evt) => setHandleName(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                required
-                id="email-address"
-                name="emailAddress"
-                label="メールアドレス"
-                value={emailAddress}
-                onChange={(evt) => setEmailAddress(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                id="secondary-contact"
-                name="entry.1399057616"
-                label="第二連絡先（Twitter ID etc.）"
-                value={secondaryContact}
-                onChange={(evt) => setSecondaryContact(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                required
-                id="age"
-                name="entry.1272048879"
-                label="参加初日時点の年齢"
-                value={age}
-                onChange={(evt) => setAge(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                select
-                required
-                id="part"
-                name="entry.1009972677"
-                label="参加希望パート"
-                value={part}
-                onChange={(evt) => setPart(evt.target.value)}
-              >
-                {PART_NAMES.map((partName) => (
-                  <MenuItem key={partName} value={partName}>
-                    {partName}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                id="experience"
-                name="entry.330848135"
-                label="参加希望パートの経験年数"
-                value={experience}
-                onChange={(evt) => setExperience(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                multiline
-                id="other-parts"
-                name="entry.2120967444"
-                label="その他持参 or 演奏可能な楽器・パート"
-                value={otherSkills}
-                onChange={(evt) => setOtherSkills(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <TextField
-                multiline
-                id="performance"
-                name="entry.1432922972"
-                label="過去に参加した演奏イベント・演奏会等"
-                value={performance}
-                onChange={(evt) => setPerformance(evt.currentTarget.value)}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    checked={agreed}
-                    onChange={(_evt) => setAgreed(!agreed)}
-                  />
-                }
-                label="参加要項を読み、同意します。"
-              />
-              <input
-                type="hidden"
-                name="entry.1346686968"
-                value={agreed ? "はい" : "いいえ"}
-              />
-            </FormItemWrapper>
-            <FormItemWrapper>
-              <ButtonWrapper>
-                <Button
-                  type="submit"
-                  variant="outlined"
-                  disabled={!canSubmit()}
+            <ThemeProvider theme={theme}>
+              <FormItemWrapper>
+                <TextField
+                  required
+                  id="handle-name"
+                  name="entry.817046770"
+                  label="ハンドルネーム"
+                  value={handleName}
+                  onChange={(evt) => setHandleName(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  required
+                  id="email-address"
+                  name="emailAddress"
+                  label="メールアドレス"
+                  value={emailAddress}
+                  onChange={(evt) => setEmailAddress(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  id="secondary-contact"
+                  name="entry.1399057616"
+                  label="第二連絡先（Twitter ID etc.）"
+                  value={secondaryContact}
+                  onChange={(evt) =>
+                    setSecondaryContact(evt.currentTarget.value)
+                  }
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  required
+                  id="age"
+                  name="entry.1272048879"
+                  label="参加初日時点の年齢"
+                  value={age}
+                  onChange={(evt) => setAge(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  select
+                  required
+                  id="part"
+                  name="entry.1009972677"
+                  label="参加希望パート"
+                  value={part}
+                  onChange={(evt) => setPart(evt.target.value)}
                 >
-                  送信
-                </Button>
-              </ButtonWrapper>
-            </FormItemWrapper>
+                  {PART_NAMES.map((partName) => (
+                    <MenuItem key={partName} value={partName}>
+                      {partName}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  required
+                  id="experience"
+                  name="entry.330848135"
+                  label="参加希望パートの経験年数"
+                  value={experience}
+                  onChange={(evt) => setExperience(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  multiline
+                  id="other-parts"
+                  name="entry.2120967444"
+                  label="その他持参 or 演奏可能な楽器・パート"
+                  value={otherSkills}
+                  onChange={(evt) => setOtherSkills(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  multiline
+                  id="performance"
+                  name="entry.1432922972"
+                  label="過去に参加した演奏イベント・演奏会等"
+                  value={performance}
+                  onChange={(evt) => setPerformance(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <CheckboxWrapper>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={agreed}
+                        onChange={(_evt) => setAgreed(!agreed)}
+                      />
+                    }
+                    label="参加要項を読み、同意します。"
+                  />
+                </CheckboxWrapper>
+                <input
+                  type="hidden"
+                  name="entry.1346686968"
+                  value={agreed ? "はい" : "いいえ"}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <ButtonWrapper>
+                  <Button
+                    type="submit"
+                    variant="outlined"
+                    disabled={!canSubmit()}
+                  >
+                    送信
+                  </Button>
+                </ButtonWrapper>
+              </FormItemWrapper>
+            </ThemeProvider>
           </form>
           <iframe name={DUMMY_IFRAME_NAME} />
         </RecruitmentBody>
