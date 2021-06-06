@@ -6,7 +6,6 @@ module.exports = {
     return {
       "/": { page: "/" },
       "/entry": { page: "/entry" },
-      "/loading": { page: "/loading" },
       "/privacy": { page: "/privacy" },
       "/thanks": { page: "/thanks" },
       "/requirements/001": { page: "/requirements/001" },
