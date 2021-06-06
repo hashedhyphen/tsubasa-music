@@ -1,5 +1,13 @@
-import React, { FormEvent, useState } from "react"
+import styled from "styled-components"
+import React, { useState } from "react"
 import { useRouter } from "next/router"
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  MenuItem,
+  TextField,
+} from "@material-ui/core"
 
 import Layout from "../components/Layout"
 import {
@@ -8,17 +16,63 @@ import {
   RecruitmentBody,
 } from "../components/Recruitment"
 
+const FormItemWrapper = styled.div`
+  padding-bottom: 1rem;
+  width: calc(100% - 2rem);
+
+  & > div {
+    width: 100%;
+  }
+`
+
+const ButtonWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+`
+
 const GFORM_URI_PATH =
   "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/formResponse"
 
 const DUMMY_IFRAME_NAME = "dummy"
 
-const Page = () => {
-  const [emailAddress, setEmailAddress] = useState("api-test-x@example.com")
+const PART_NAMES = [
+  "Soprano（合唱）",
+  "Alto（合唱）",
+  "Tenor（合唱）",
+  "Bass（合唱）",
+  "Piccolo",
+  "Flute",
+  "Oboe",
+  "Basson",
+  "Clarinet（並管）",
+  "Bass Clarinet",
+  "Alto Saxophone",
+  "Tenor Saxophone",
+  "Baritone Saxophone",
+  "Horn",
+  "Trumpet",
+  "Trombone",
+  "Euphonium",
+  "Tuba",
+  "Percussion（Drums 以外）",
+  "Electric Bass",
+]
 
+const Page = () => {
   const router = useRouter()
-  const handleSubmit = (_e: FormEvent) => {
-    router.push("/thanks")
+
+  const [handleName, setHandleName] = useState("")
+  const [emailAddress, setEmailAddress] = useState("")
+  const [secondaryContact, setSecondaryContact] = useState("")
+  const [age, setAge] = useState("")
+  const [part, setPart] = useState("")
+  const [experience, setExperience] = useState("")
+  const [otherSkills, setOtherSkills] = useState("")
+  const [performance, setPerformance] = useState("")
+  const [agreed, setAgreed] = useState(false)
+
+  function canSubmit() {
+    return agreed
   }
 
   return (
@@ -29,35 +83,122 @@ const Page = () => {
           <form
             method="POST"
             action={GFORM_URI_PATH}
-            onSubmit={handleSubmit}
             target={DUMMY_IFRAME_NAME}
+            onSubmit={(_evt) => router.push("/thanks")}
           >
-            <input readOnly type="text" name="entry.817046770" value="Hash" />
-            <input
-              readOnly
-              type="text"
-              name="entry.1399057616"
-              value="@hashedhyphen"
-            />
-            <input readOnly type="text" name="entry.1272048879" value="27" />
-            <input readOnly type="text" name="entry.330848135" value="2" />
-            <textarea
-              readOnly
-              name="entry.2120967444"
-              value="B♭Clarinet その他"
-            />
-            <textarea readOnly name="entry.1432922972" value="〈唱物語〉" />
-            <select name="entry.1009972677" value="Bass（合唱）">
-              <option value="Bass（合唱）">Bass（合唱）</option>
-            </select>
-            <input readOnly type="text" name="entry.1346686968" value="はい" />
-            <input
-              type="text"
-              name="emailAddress"
-              value={emailAddress}
-              onChange={(evt) => setEmailAddress(evt.currentTarget.value)}
-            />
-            <button type="submit">送信</button>
+            <FormItemWrapper>
+              <TextField
+                required
+                id="handle-name"
+                name="entry.817046770"
+                label="ハンドルネーム"
+                value={handleName}
+                onChange={(evt) => setHandleName(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                required
+                id="email-address"
+                name="emailAddress"
+                label="メールアドレス"
+                value={emailAddress}
+                onChange={(evt) => setEmailAddress(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                id="secondary-contact"
+                name="entry.1399057616"
+                label="第二連絡先（Twitter ID etc.）"
+                value={secondaryContact}
+                onChange={(evt) => setSecondaryContact(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                required
+                id="age"
+                name="entry.1272048879"
+                label="参加初日時点の年齢"
+                value={age}
+                onChange={(evt) => setAge(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                select
+                required
+                id="part"
+                name="entry.1009972677"
+                label="参加希望パート"
+                value={part}
+                onChange={(evt) => setPart(evt.target.value)}
+              >
+                {PART_NAMES.map((partName) => (
+                  <MenuItem key={partName} value={partName}>
+                    {partName}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                id="experience"
+                name="entry.330848135"
+                label="参加希望パートの経験年数"
+                value={experience}
+                onChange={(evt) => setExperience(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                multiline
+                id="other-parts"
+                name="entry.2120967444"
+                label="その他持参 or 演奏可能な楽器・パート"
+                value={otherSkills}
+                onChange={(evt) => setOtherSkills(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <TextField
+                multiline
+                id="performance"
+                name="entry.1432922972"
+                label="過去に参加した演奏イベント・演奏会等"
+                value={performance}
+                onChange={(evt) => setPerformance(evt.currentTarget.value)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    color="primary"
+                    checked={agreed}
+                    onChange={(_evt) => setAgreed(!agreed)}
+                  />
+                }
+                label="参加要項を読み、同意します。"
+              />
+              <input
+                type="hidden"
+                name="entry.1346686968"
+                value={agreed ? "はい" : "いいえ"}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper>
+              <ButtonWrapper>
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  disabled={!canSubmit()}
+                >
+                  送信
+                </Button>
+              </ButtonWrapper>
+            </FormItemWrapper>
           </form>
           <iframe name={DUMMY_IFRAME_NAME} />
         </RecruitmentBody>
