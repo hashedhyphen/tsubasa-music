@@ -142,6 +142,9 @@ const Page = () => (
               <ListItem>
                 会場費・打楽器レンタル・著作権使用料等に充てさせていただきます。
               </ListItem>
+              <ListItem>
+                企画終了後に、経費範囲内でカンパ（任意）をお願いする予定です。
+              </ListItem>
             </ul>
           </DefContent>
         </RecruitmentSection>
