@@ -110,7 +110,7 @@ const IndexPage = () => (
       </Punchline>
 
       <EntryShortcut>
-        <Link href="/entry">
+        <Link href="/requirements/001">
           <Button variant="contained" color="primary">
             奏者申込フォームへ
           </Button>

@@ -51,7 +51,7 @@ export default function () {
             までご連絡ください。
           </p>
           <ButtonWrapper>
-            <a href="https://twitter.com/intent/tweet?text=%23%E6%B5%AA%E7%99%BD%E5%85%AC%E5%9C%92%E9%9F%B3%E6%A8%82%E5%9C%98%20%E6%A5%BD%E5%8A%87%E3%80%8A%E3%81%A4%E3%81%B0%E3%81%95%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%80%8B%E3%81%AB%E5%BF%9C%E5%8B%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%0Ahttps%3A%2F%2Fmusic.%E7%BE%BD%E5%B7%9D%E7%BF%BC.com%2F/entry">
+            <a href="https://twitter.com/intent/tweet?text=%23%E6%B5%AA%E7%99%BD%E5%85%AC%E5%9C%92%E9%9F%B3%E6%A8%82%E5%9C%98%20%E6%A5%BD%E5%8A%87%E3%80%8A%E3%81%A4%E3%81%B0%E3%81%95%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%80%8B%E3%81%AB%E5%BF%9C%E5%8B%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%0Ahttps%3A%2F%2Fmusic.%E7%BE%BD%E5%B7%9D%E7%BF%BC.com%2F/">
               <Button variant="contained" color="primary">
                 Twitter で共有
               </Button>
