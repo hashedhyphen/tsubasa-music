@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import Link from "next/link"
+import { Button, ThemeProvider } from "@material-ui/core"
 
 import Layout from "../components/Layout"
 import { BiographyList } from "../components/BiographyList"
@@ -7,6 +9,13 @@ import { RepertoireList } from "../components/RepertoireList"
 import { ScheduleList } from "../components/ScheduleList"
 import { SplashScreen } from "../components/SplashScreen"
 import { Title } from "../components/Title"
+import { theme } from "../lib/theme"
+
+const EntryShortcut = styled.div`
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+`
 
 const Section = styled.section`
   width: 100%;
@@ -88,100 +97,110 @@ const TwitterWrapper = styled.div`
 `
 
 const IndexPage = () => (
-  <Layout>
-    <SplashScreen />
+  <ThemeProvider theme={theme}>
+    <Layout>
+      <SplashScreen />
 
-    <Punchline>
-      青春は<Punct>、</Punct>君の
-      <ruby>
-        朝<RubyText>あした</RubyText>
-      </ruby>
-      に目を覚ます<Punct>。</Punct>
-    </Punchline>
+      <Punchline>
+        青春は<Punct>、</Punct>君の
+        <ruby>
+          朝<RubyText>あした</RubyText>
+        </ruby>
+        に目を覚ます<Punct>。</Punct>
+      </Punchline>
 
-    <Title />
+      <EntryShortcut>
+        <Link href="/entry">
+          <Button variant="contained" color="primary">
+            奏者申込フォームへ
+          </Button>
+        </Link>
+      </EntryShortcut>
 
-    <Description>
-      <p>朗讀✕合唱✕吹奏樂</p>
-      <p>一日限リ無形同人作品</p>
-    </Description>
+      <Title />
 
-    <Notice>
-      〈物語〉シリーズ公式とは無関係の
-      <br />
-      ファンによる非公式演奏企画です
-    </Notice>
+      <Description>
+        <p>朗讀✕合唱✕吹奏樂</p>
+        <p>一日限リ無形同人作品</p>
+      </Description>
 
-    <ConceptArt />
+      <Notice>
+        〈物語〉シリーズ公式とは無関係の
+        <br />
+        ファンによる非公式演奏企画です
+      </Notice>
 
-    <Spacer />
+      <ConceptArt />
 
-    <Section>
-      <SectionHeader>曲目</SectionHeader>
-      <SectionBody>
-        <RepertoireList />
-      </SectionBody>
-    </Section>
+      <Spacer />
 
-    <Spacer />
+      <Section>
+        <SectionHeader>曲目</SectionHeader>
+        <SectionBody>
+          <RepertoireList />
+        </SectionBody>
+      </Section>
 
-    <Section>
-      <SectionHeader>日程</SectionHeader>
-      <SectionBody>
-        <ScheduleList />
-      </SectionBody>
-    </Section>
+      <Spacer />
 
-    <Spacer />
+      <Section>
+        <SectionHeader>日程</SectionHeader>
+        <SectionBody>
+          <ScheduleList />
+        </SectionBody>
+      </Section>
 
-    <Section>
-      <SectionHeader>主宰・編曲者・指揮者紹介</SectionHeader>
-      <SectionBody>
-        <BiographyList />
-      </SectionBody>
-    </Section>
+      <Spacer />
 
-    <Spacer />
+      <Section>
+        <SectionHeader>主宰・編曲者・指揮者紹介</SectionHeader>
+        <SectionBody>
+          <BiographyList />
+        </SectionBody>
+      </Section>
 
-    <Section>
-      <SectionHeader>企画趣旨</SectionHeader>
-      <SectionBody>
-        <Paragraphs>
-          <p>
-            「羽川さんの音楽とともに、羽川さんの平穏を願う無形の合同誌を作りたい」
-          </p>
-          <p>本企画の本質はすべてここに集約されます。</p>
-          <p>
-            吹奏楽といった器楽のみならず、合唱と朗読による〈言葉〉と〈物語〉、そしてコンセプトアートも合わせた、さながら〈物語〉フェスのような、その日その場限りの無形な合同誌。
-          </p>
-          <p>
-            羽川さんの音楽と、羽川さんの物語による、羽川さんのための《樂劇》。
-          </p>
-        </Paragraphs>
-      </SectionBody>
-    </Section>
+      <Spacer />
 
-    <Spacer />
+      <Section>
+        <SectionHeader>企画趣旨</SectionHeader>
+        <SectionBody>
+          <Paragraphs>
+            <p>
+              「羽川さんの音楽とともに、羽川さんの平穏を願う無形の合同誌を作りたい」
+            </p>
+            <p>本企画の本質はすべてここに集約されます。</p>
+            <p>
+              吹奏楽といった器楽のみならず、合唱と朗読による〈言葉〉と〈物語〉、そしてコンセプトアートも合わせた、さながら〈物語〉フェスのような、その日その場限りの無形な合同誌。
+            </p>
+            <p>
+              羽川さんの音楽と、羽川さんの物語による、羽川さんのための《樂劇》。
+            </p>
+          </Paragraphs>
+        </SectionBody>
+      </Section>
 
-    <Section>
-      <SectionHeader>Twitter</SectionHeader>
-      <SectionBody>
-        <TwitterWrapper>
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/XXXXParkOrche?ref_src=twsrc%5Etfw"
-          >
-            Tweets by XXXXParkOrche
-          </a>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charSet="utf-8"
-          ></script>
-        </TwitterWrapper>
-      </SectionBody>
-    </Section>
-  </Layout>
+      <Spacer />
+
+      <Section>
+        <SectionHeader>Twitter</SectionHeader>
+        <SectionBody>
+          <TwitterWrapper>
+            <a
+              className="twitter-timeline"
+              href="https://twitter.com/XXXXParkOrche?ref_src=twsrc%5Etfw"
+            >
+              Tweets by XXXXParkOrche
+            </a>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charSet="utf-8"
+            ></script>
+          </TwitterWrapper>
+        </SectionBody>
+      </Section>
+    </Layout>
+  </ThemeProvider>
 )
 
 export default IndexPage

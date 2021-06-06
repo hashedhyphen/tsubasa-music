@@ -37,14 +37,14 @@ const ButtonWrapper = styled.div`
 export default function () {
   return (
     <ThemeProvider theme={theme}>
-      <Layout titlePrefix="参加申込完了">
+      <Layout titlePrefix="奏者申込完了">
         <HeaderWrapper>
-          <Header>参加申込完了</Header>
+          <Header>奏者申込完了</Header>
         </HeaderWrapper>
         <Body>
           <p>お申し込みありがとうございました。</p>
           <p>
-            参加申込完了のメールが届いていない場合は
+            奏者申込完了のメールが届いていない場合は
             <ExternalLink href="https://twitter.com/hashedhyphen">
               @hashedhyphen
             </ExternalLink>

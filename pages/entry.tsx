@@ -105,9 +105,9 @@ const Page = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Layout titlePrefix="参加申込フォーム">
+      <Layout titlePrefix="奏者申込フォーム">
         <RecruitmentContainer>
-          <RecruitmentSideHeader>参加申込フォーム</RecruitmentSideHeader>
+          <RecruitmentSideHeader>奏者申込フォーム</RecruitmentSideHeader>
           <RecruitmentBody>
             <p>
               事前に
