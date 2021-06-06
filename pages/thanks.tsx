@@ -45,8 +45,8 @@ export default function () {
           <p>お申し込みありがとうございました。</p>
           <p>
             奏者申込完了のメールが届いていない場合は
-            <ExternalLink href="https://twitter.com/hashedhyphen">
-              @hashedhyphen
+            <ExternalLink href="mailto:xxxxparkorche@gmail.com">
+              xxxxparkorche[at]gmail.com
             </ExternalLink>
             までご連絡ください。
           </p>
