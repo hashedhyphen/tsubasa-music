@@ -179,6 +179,7 @@ const Page = () => (
               <Instrument>Euphonium</Instrument>
               <Instrument>Tuba</Instrument>
               <Instrument>Percussion（Drums 以外）</Instrument>
+              <Instrument>Electric Bass</Instrument>
             </InstrumentList>
           </RecruitmentSectionBody>
         </RecruitmentSection>
