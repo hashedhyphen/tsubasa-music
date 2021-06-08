@@ -105,7 +105,7 @@ export function BiographyList() {
             また、吹奏楽・合唱を問わずサブカル系の演奏イベント・演奏会において活動する傍ら、編曲活動も行う。
           </p>
           <p>
-            昨年の第五回副次的文化系合唱祭では「
+            第五回副次的文化系合唱祭では「
             <ExternalLink
               href="https://twitter.com/fkjUtaumono"
               target="_blank"
