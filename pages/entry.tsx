@@ -72,11 +72,12 @@ const PART_NAMES = [
   "Baritone Saxophone",
   "Horn",
   "Trumpet",
-  "Trombone",
+  "Tenor Trombone",
+  "Bass Trombone",
   "Euphonium",
   "Tuba",
-  "Percussion（Drums 以外）",
   "Electric Bass",
+  "Percussion（Drums 以外）",
 ]
 
 const Page = () => {
@@ -87,6 +88,7 @@ const Page = () => {
   const [secondaryContact, setSecondaryContact] = useState("")
   const [age, setAge] = useState("")
   const [part, setPart] = useState("")
+  const [secondaryPart, setSecondaryPart] = useState("")
   const [experience, setExperience] = useState("")
   const [otherSkills, setOtherSkills] = useState("")
   const [performance, setPerformance] = useState("")
@@ -96,9 +98,9 @@ const Page = () => {
     return (
       handleName !== "" &&
       emailAddress !== "" &&
+      emailAddress !== secondaryContact &&
       age !== "" &&
       part !== "" &&
-      experience !== "" &&
       agreed
     )
   }
@@ -169,7 +171,7 @@ const Page = () => {
                   required
                   id="part"
                   name="entry.1009972677"
-                  label="参加希望パート"
+                  label="第一希望パート"
                   value={part}
                   onChange={(evt) => setPart(evt.target.value)}
                 >
@@ -182,10 +184,27 @@ const Page = () => {
               </FormItemWrapper>
               <FormItemWrapper>
                 <TextField
-                  required
+                  select
+                  id="secondary-part"
+                  name="entry.718749042"
+                  label="第二希望パート"
+                  value={secondaryPart}
+                  onChange={(evt) => setSecondaryPart(evt.target.value)}
+                >
+                  {PART_NAMES.filter((partName) => partName !== part).map(
+                    (partName) => (
+                      <MenuItem key={partName} value={partName}>
+                        {partName}
+                      </MenuItem>
+                    )
+                  )}
+                </TextField>
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
                   id="experience"
                   name="entry.330848135"
-                  label="参加希望パートの経験年数"
+                  label="第一希望パートの経験年数"
                   value={experience}
                   onChange={(evt) => setExperience(evt.currentTarget.value)}
                 />
@@ -205,7 +224,7 @@ const Page = () => {
                   multiline
                   id="performance"
                   name="entry.1432922972"
-                  label="過去に参加した演奏イベント・演奏会等"
+                  label="所属団体・演奏イベントへの参加歴等"
                   value={performance}
                   onChange={(evt) => setPerformance(evt.currentTarget.value)}
                 />

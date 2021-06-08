@@ -136,8 +136,7 @@ const Page = () => (
             </ul>
             <ul>
               <ListItem>
-                情勢の不確実性を考慮し、最終日 3/21
-                に集金させていただきます（集金時に混雑が発生しないよう工夫いたします）。
+                情勢の不確実性を考慮し、イベント当日に集金させていただきます（集金時に混雑が発生しないよう工夫いたします）。
               </ListItem>
               <ListItem>
                 会場費・打楽器レンタル・著作権使用料等に充てさせていただきます。
@@ -153,7 +152,7 @@ const Page = () => (
             現在の募集ステータス
           </RecruitmentSectionHeader>
           <RecruitmentSectionBody>
-            <p>一次募集（～yyyy/mm/dd）</p>
+            <p>一次募集（～2021-07-31）</p>
             <p>
               ※先着順ではありません。募集期間終了後、参加の可否を運営よりメールでご連絡いたします。
             </p>
@@ -178,8 +177,8 @@ const Page = () => (
               <Instrument>Trombone（Tenor・Bass）</Instrument>
               <Instrument>Euphonium</Instrument>
               <Instrument>Tuba</Instrument>
-              <Instrument>Percussion（Drums 以外）</Instrument>
               <Instrument>Electric Bass</Instrument>
+              <Instrument>Percussion（Drums 以外）</Instrument>
             </InstrumentList>
           </RecruitmentSectionBody>
         </RecruitmentSection>

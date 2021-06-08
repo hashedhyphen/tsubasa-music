@@ -66,9 +66,7 @@ const Page = () => (
             </Link>
           </NavigationButton>
           <NavigationButton>
-            <a target="blank" href="#">
-              応募フォームへ ▷
-            </a>
+            <Link href="/entry">応募フォームへ ▷</Link>
           </NavigationButton>
         </Navigation>
       </RecruitmentBody>
