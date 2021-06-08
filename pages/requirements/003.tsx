@@ -71,12 +71,12 @@ const Page = () => (
 
         <Navigation>
           <NavigationButton>
-            <Link href="/recruitment/002">
+            <Link href="/requirements/002">
               <a>◁ 002</a>
             </Link>
           </NavigationButton>
           <NavigationButton>
-            <Link href="/recruitment/004">
+            <Link href="/requirements/004">
               <a>004 ▷</a>
             </Link>
           </NavigationButton>

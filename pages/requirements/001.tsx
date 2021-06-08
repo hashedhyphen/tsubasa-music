@@ -185,7 +185,7 @@ const Page = () => (
         </RecruitmentSection>
         <Navigation>
           <NavigationButton>
-            <Link href="/recruitment/002">
+            <Link href="/requirements/002">
               <a>002 ▷</a>
             </Link>
           </NavigationButton>
