@@ -114,7 +114,7 @@ const Page = () => {
             <p>
               事前に
               <LinkWrapper>
-                <Link href="requirements/001">参加要項</Link>
+                <Link href="/requirements/001">参加要項</Link>
               </LinkWrapper>
               をよくお読みください。
             </p>
