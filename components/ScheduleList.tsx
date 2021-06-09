@@ -22,11 +22,11 @@ export function ScheduleList() {
     <ul>
       <Schedule>
         <Date>2022-02-19（土）</Date>
-        <Note>合唱レコーディング（関東圏内）</Note>
+        <Note>合唱制作（関東圏内）</Note>
       </Schedule>
       <Schedule>
         <Date>2022-03-06（日）</Date>
-        <Note>吹奏楽レコーディング（関東圏内）</Note>
+        <Note>吹奏楽制作（関東圏内）</Note>
       </Schedule>
       <Schedule>
         <Date>2022-03-21（祝）</Date>

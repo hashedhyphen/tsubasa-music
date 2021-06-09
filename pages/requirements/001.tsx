@@ -163,7 +163,7 @@ const Page = () => (
           <RecruitmentSectionBody>
             <p>
               吹奏楽奏者は 2/19 の "perfect slumbers"
-              合唱レコーディングへ参加可能です（参加費据え置き）。
+              合唱制作へ参加可能です（参加費据え置き）。
             </p>
             <InstrumentList>
               <Instrument>合唱（SATB）</Instrument>
