@@ -35,7 +35,7 @@ const ButtonWrapper = styled.div`
   text-align: center;
 `
 
-function getTwitterIntentUrl(part: string) {
+function getTwitterIntentUrl(part: string | string[]) {
   const usp = new URLSearchParams()
   usp.set(
     "text",
