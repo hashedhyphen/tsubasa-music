@@ -141,7 +141,10 @@ const Page = () => {
     const formEl = formRef.current
     formEl.submit()
 
-    router.push("/thanks")
+    router.push({
+      pathname: "/thanks",
+      query: { part },
+    })
   }
 
   return (
