@@ -122,18 +122,20 @@ const Page = () => {
     evt.preventDefault()
 
     if (reCaptcha === null) {
+      console.error("reCaptcha is null")
       return
     }
     const token = await reCaptcha.execute("submit")
-    console.log(token)
 
     if (reCaptchaRef.current === null) {
+      console.error("reCaptchaRef.current is null")
       return
     }
     const reCaptchaEl = reCaptchaRef.current
     reCaptchaEl.value = token
 
     if (formRef.current === null) {
+      console.error("formRef.current is null")
       return
     }
     const formEl = formRef.current
