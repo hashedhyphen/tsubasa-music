@@ -66,7 +66,7 @@ const PART_NAMES = [
   "Flute",
   "Oboe",
   "Basson",
-  "B♭ Clarinet",
+  "B♭Clarinet",
   "Bass Clarinet",
   "Alto Saxophone",
   "Tenor Saxophone",
