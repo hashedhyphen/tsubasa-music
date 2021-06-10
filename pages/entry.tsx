@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import {
@@ -10,6 +10,7 @@ import {
   TextField,
   ThemeProvider,
 } from "@material-ui/core"
+import { ReCaptchaInstance, load } from "recaptcha-v3"
 
 import Layout from "../components/Layout"
 import {
@@ -93,6 +94,18 @@ const Page = () => {
   const [otherSkills, setOtherSkills] = useState("")
   const [performance, setPerformance] = useState("")
   const [agreed, setAgreed] = useState(false)
+  const [reCaptcha, setReCaptcha] = useState<ReCaptchaInstance | null>(null)
+
+  const formRef = useRef<HTMLFormElement>(null)
+  const reCaptchaRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (reCaptcha === null) {
+      load("6Le8xCQbAAAAAB5wDJVtGrI5jSgCF6_bmRkPhzVa").then((rc) =>
+        setReCaptcha(rc)
+      )
+    }
+  })
 
   function canSubmit() {
     return (
@@ -103,6 +116,30 @@ const Page = () => {
       part !== "" &&
       agreed
     )
+  }
+
+  async function handleSubmit(evt: React.FormEvent<HTMLFormElement>) {
+    evt.preventDefault()
+
+    if (reCaptcha === null) {
+      return
+    }
+    const token = await reCaptcha.execute("submit")
+    console.log(token)
+
+    if (reCaptchaRef.current === null) {
+      return
+    }
+    const reCaptchaEl = reCaptchaRef.current
+    reCaptchaEl.value = token
+
+    if (formRef.current === null) {
+      return
+    }
+    const formEl = formRef.current
+    formEl.submit()
+
+    router.push("/thanks")
   }
 
   return (
@@ -119,10 +156,11 @@ const Page = () => {
               をよくお読みください。
             </p>
             <form
+              ref={formRef}
               method="POST"
               action={GFORM_URI_PATH}
               target={DUMMY_IFRAME_NAME}
-              onSubmit={(_evt) => router.push("/thanks")}
+              onSubmit={handleSubmit}
             >
               <FormItemWrapper>
                 <TextField
@@ -259,6 +297,12 @@ const Page = () => {
                   </Button>
                 </ButtonWrapper>
               </FormItemWrapper>
+              <input
+                ref={reCaptchaRef}
+                type="hidden"
+                name="entry.525084239"
+                value=""
+              />
             </form>
             <iframe name={DUMMY_IFRAME_NAME} />
           </RecruitmentBody>
