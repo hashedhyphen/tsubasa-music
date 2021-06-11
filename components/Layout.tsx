@@ -91,7 +91,7 @@ const Layout = ({ children, titlePrefix }: Props) => (
 
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-170071458-1"
+        src="https://www.googletagmanager.com/gtag/js?id=G-GKRZ8WQC2P"
       />
       <script
         dangerouslySetInnerHTML={{
@@ -99,7 +99,7 @@ const Layout = ({ children, titlePrefix }: Props) => (
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'UA-170071458-1');
+            gtag('config', 'G-GKRZ8WQC2P');
           `,
         }}
       ></script>
