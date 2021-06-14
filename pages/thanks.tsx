@@ -35,6 +35,10 @@ const ButtonWrapper = styled.div`
   text-align: center;
 `
 
+const Message = styled.span`
+  text-transform: none;
+`
+
 function getTwitterIntentUrl(part: string | string[]) {
   const usp = new URLSearchParams()
   usp.set(
@@ -68,7 +72,7 @@ export default function () {
           <ButtonWrapper>
             <a href={getTwitterIntentUrl(router.query.part)}>
               <Button variant="contained" color="primary">
-                Twitter で共有
+                <Message>Twitter に投稿</Message>
               </Button>
             </a>
           </ButtonWrapper>
