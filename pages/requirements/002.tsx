@@ -38,44 +38,43 @@ const Page = () => (
             譜読み、練習をご自身で行えること。また、演奏する楽器をご自身で準備できる方（打楽器はマレット等）
           </ListItem>
           <ListItem>
-            <p>
-              イベント当日（8 月 29 日）時点で満 15 歳以上の方（中学生不可）
-            </p>
+            <p>参加初日時点で満 15 歳以上の方（中学生不可）</p>
             <p>※18 歳未満の方は保護者の同意書をご提出いただきます。</p>
           </ListItem>
           <ListItem>
             個人による演奏の録画、録音、演奏風景の撮影等を許可なく行わないこと。
           </ListItem>
           <ListItem>
-            譜面のコピー、本企画以外での使用、第三者への配布、SNS
+            譜面に関する本企画以外での使用、第三者への配布、SNS
             への掲載等を一切行わないこと。
           </ListItem>
           <ListItem>本企画に関する内部情報を一切漏洩しないこと。</ListItem>
           <ListItem>
             規定の参加費を運営側が求める方法でイベント当日に支払い可能であること。
           </ListItem>
+          <ListItem>コスプレをした状態での参加はできません。</ListItem>
           <ListItem>
             <p>
               保健当局からのクラスター調査に協力できるよう（当日関係者に新型コロナウイルス感染症の陽性者が確認された場合に限る）
               <Important>
-                氏名・電話番号をイベント当日にご提供いただける方
+                氏名・電話番号を参加初日以前にご提供いただける方
               </Important>
             </p>
             <p>
-              （情報はイベント当日に収集し、主宰の責任において 1
-              ヶ月管理した後に破棄します）
+              （収集した個人情報は主宰の責任において 1 ヶ月管理し、4/21
+              に破棄します）
             </p>
           </ListItem>
         </List>
 
         <Navigation>
           <NavigationButton>
-            <Link href="/recruitment/001">
+            <Link href="/requirements/001">
               <a>◁ 001</a>
             </Link>
           </NavigationButton>
           <NavigationButton>
-            <Link href="/recruitment/003">
+            <Link href="/requirements/003">
               <a>003 ▷</a>
             </Link>
           </NavigationButton>

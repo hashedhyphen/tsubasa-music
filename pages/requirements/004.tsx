@@ -32,9 +32,11 @@ const Page = () => (
           </ListItem>
           <ListItem>運営からの連絡をもって参加確定となります。</ListItem>
           <ListItem>
-            <p>各楽器ごとに参加人数に上限を設けております。</p>
             <p>
-              応募者多数の場合ご参加いただけない場合がございますので、予めご了承ください。
+              利用施設の人数制限などを踏まえ、参加人数の上限を設けているパートがあります。
+            </p>
+            <p>
+              応募者多数の場合ご参加いただけない場合がございます。予めご了承ください。
             </p>
           </ListItem>
           <ListItem>
@@ -42,7 +44,7 @@ const Page = () => (
           </ListItem>
           <ListItem>
             <p>
-              応募結果のご連絡は「xxxxparkorche&lt;アット&gt;gmail.com」からお送りします。
+              応募結果については「xxxxparkorche&lt;アット&gt;gmail.com」からご連絡いたします。
             </p>
             <p>
               迷惑メール対策やアドレス指定受信をされている場合は、受信できるよう設定をお願いいたします。
@@ -51,24 +53,22 @@ const Page = () => (
           <ListItem>
             <p>
               入力していただいた個人情報は、不正アクセス、紛失、漏洩等が発生しないよう厳重に管理し、
-              本企画の奏者募集及び活動を目的とする以外の使用はいたしません。
+              本企画の奏者募集、活動、ならびに保健当局からのクラスター調査以外で使用することはありません。
             </p>
             <p>
-              また法律に基づいた、行政機関や司法機関からの要請があった場合を除き、第三者には提供いたしません。
+              また、行政機関や司法機関から法的要請があった場合を除き、第三者には提供いたしません。
             </p>
           </ListItem>
         </List>
 
         <Navigation>
           <NavigationButton>
-            <Link href="/recruitment/003">
+            <Link href="/requirements/003">
               <a>◁ 003</a>
             </Link>
           </NavigationButton>
           <NavigationButton>
-            <a target="blank" href="#">
-              応募フォームへ ▷
-            </a>
+            <Link href="/entry">応募フォームへ ▷</Link>
           </NavigationButton>
         </Navigation>
       </RecruitmentBody>

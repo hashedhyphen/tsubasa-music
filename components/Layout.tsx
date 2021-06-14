@@ -38,6 +38,19 @@ type Props = {
   titlePrefix?: string
 }
 
+function getOgpUrl(): string {
+  const origin = "https://music.羽川翼.com"
+  if (typeof window !== "undefined") {
+    if (window.location.pathname.startsWith("/requirements/")) {
+      return `${origin}/requirements`
+    }
+    if (window.location.pathname === "/entry") {
+      return `${origin}/entry`
+    }
+  }
+  return `${origin}/`
+}
+
 const Layout = ({ children, titlePrefix }: Props) => (
   <Container>
     <Head>
@@ -47,7 +60,7 @@ const Layout = ({ children, titlePrefix }: Props) => (
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@XXXXParkOrche" />
-      <meta property="og:url" content="https://music.羽川翼.com/" />
+      <meta property="og:url" content={getOgpUrl()} />
       <meta
         property="og:title"
         content="浪白公園音樂團 樂劇《つばさミュージック》ポータルサイト"
@@ -78,7 +91,7 @@ const Layout = ({ children, titlePrefix }: Props) => (
 
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-170071458-1"
+        src="https://www.googletagmanager.com/gtag/js?id=G-GKRZ8WQC2P"
       />
       <script
         dangerouslySetInnerHTML={{
@@ -86,7 +99,22 @@ const Layout = ({ children, titlePrefix }: Props) => (
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'UA-170071458-1');
+            gtag('config', 'G-GKRZ8WQC2P');
+          `,
+        }}
+      ></script>
+
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-199293425-1"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-199293425-1');
           `,
         }}
       ></script>
