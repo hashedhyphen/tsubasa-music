@@ -14,7 +14,7 @@ import { theme } from "../lib/theme"
 const EntryShortcut = styled.div`
   position: fixed;
   right: 0.5rem;
-  bottom: 0.5rem;
+  bottom: 1rem;
 `
 
 const Section = styled.section`
@@ -111,7 +111,7 @@ const IndexPage = () => (
 
       <EntryShortcut>
         <Link href="/requirements/001">
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" size="large">
             奏者申込フォームへ
           </Button>
         </Link>
