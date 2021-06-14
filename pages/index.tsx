@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { ThemeProvider } from "@material-ui/core"
+import { Button, ThemeProvider } from "@material-ui/core"
+import Link from "next/link"
 
 import Layout from "../components/Layout"
 import { BiographyList } from "../components/BiographyList"
@@ -10,13 +11,11 @@ import { SplashScreen } from "../components/SplashScreen"
 import { Title } from "../components/Title"
 import { theme } from "../lib/theme"
 
-/*
 const EntryShortcut = styled.div`
   position: fixed;
   right: 0.5rem;
   bottom: 1rem;
 `
-*/
 
 const Section = styled.section`
   width: 100%;
@@ -110,7 +109,6 @@ const IndexPage = () => (
         に目を覚ます<Punct>。</Punct>
       </Punchline>
 
-      {/*
       <EntryShortcut>
         <Link href="/requirements/001">
           <Button variant="contained" color="primary" size="large">
@@ -118,7 +116,6 @@ const IndexPage = () => (
           </Button>
         </Link>
       </EntryShortcut>
-      */}
 
       <Title />
 
