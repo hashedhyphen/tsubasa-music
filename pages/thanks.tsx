@@ -61,7 +61,7 @@ export default function () {
           <Header>奏者申込完了</Header>
         </HeaderWrapper>
         <Body>
-          <p>お申し込みありがとうございました。</p>
+          <p>お申し込みありがとうございました！</p>
           <p>
             奏者申込完了のメールが届いていない場合は
             <ExternalLink href="mailto:xxxxparkorche@gmail.com">
@@ -71,7 +71,7 @@ export default function () {
           </p>
           <ButtonWrapper>
             <a href={getTwitterIntentUrl(router.query.part)}>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" size="large">
                 <Message>Twitter に投稿</Message>
               </Button>
             </a>
