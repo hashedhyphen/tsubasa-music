@@ -63,12 +63,17 @@ export default function () {
         <Body>
           <p>お申し込みありがとうございました！</p>
           <p>
-            奏者申込完了のメールが届いていない場合は
+            申込完了メールが 5
+            分以内に届いていない場合、申込が受理されていない、またはメールアドレスが間違っている可能性があります。
+          </p>
+          <p>
+            申込完了メールが届いていない場合は
             <ExternalLink href="mailto:xxxxparkorche@gmail.com">
               xxxxparkorche[at]gmail.com
             </ExternalLink>
             までご連絡ください。
           </p>
+          <p>奏者申込した旨を是非 Twitter にご投稿ください！</p>
           <ButtonWrapper>
             <a href={getTwitterIntentUrl(router.query.part)}>
               <Button variant="contained" color="primary" size="large">
