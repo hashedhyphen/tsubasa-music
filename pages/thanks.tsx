@@ -46,7 +46,7 @@ function getTwitterIntentUrl(part: string | string[]) {
     "text",
     `
 #浪白公園音樂團 楽劇《つばさミュージック》に ${part} で応募しました！
-https://music.羽川翼.com/
+https://music.xn--5rty76epfa.com/
     `.trim()
   )
   return `https://twitter.com/intent/tweet?${usp}`
