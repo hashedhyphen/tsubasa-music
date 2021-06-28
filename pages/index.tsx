@@ -12,9 +12,17 @@ import { Title } from "../components/Title"
 import { theme } from "../lib/theme"
 
 const EntryShortcut = styled.div`
-  position: fixed;
-  right: 0.5rem;
-  bottom: 1rem;
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 1rem;
+  }
+  @media screen and (min-width: 481px) {
+    position: relative;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
 `
 
 const Section = styled.section`
@@ -109,14 +117,6 @@ const IndexPage = () => (
         に目を覚ます<Punct>。</Punct>
       </Punchline>
 
-      <EntryShortcut>
-        <Link href="/requirements/001">
-          <Button variant="contained" color="primary" size="large">
-            奏者申込フォームへ
-          </Button>
-        </Link>
-      </EntryShortcut>
-
       <Title />
 
       <Description>
@@ -129,6 +129,14 @@ const IndexPage = () => (
         <br />
         ファンによる非公式演奏企画です
       </Notice>
+
+      <EntryShortcut>
+        <Link href="/requirements/001">
+          <Button variant="contained" color="primary" size="large">
+            奏者申込フォームへ
+          </Button>
+        </Link>
+      </EntryShortcut>
 
       <ConceptArt />
 
