@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import Layout from "../components/Layout"
 import { theme } from "../lib/theme"
 import { ExternalLink } from "../components/ExternalLink"
+import { Important } from "../components/Important"
 
 const HeaderWrapper = styled.div`
   padding: 2rem 1rem;
@@ -56,24 +57,29 @@ export default function () {
 
   return (
     <ThemeProvider theme={theme}>
-      <Layout titlePrefix="奏者申込完了">
+      <Layout titlePrefix="メールをご確認ください">
         <HeaderWrapper>
-          <Header>奏者申込完了</Header>
+          <Header>メールをご確認ください</Header>
         </HeaderWrapper>
         <Body>
           <p>お申し込みありがとうございました！</p>
           <p>
-            申込完了メールが 5
-            分以内に届いていない場合、申込が受理されていない、またはメールアドレスが間違っている可能性があります。
+            <Important>
+              応募完了メールの受信をもって、正式に応募完了となります。
+            </Important>
           </p>
           <p>
-            申込完了メールが届いていない場合は
+            応募完了メールが 5
+            分以内に届いていない場合、応募が受理されていない可能性があります。
+          </p>
+          <p>
+            応募完了メールが届いていない場合は
             <ExternalLink href="mailto:xxxxparkorche@gmail.com">
               xxxxparkorche[at]gmail.com
             </ExternalLink>
             までご連絡ください。
           </p>
-          <p>奏者申込した旨を是非 Twitter にご投稿ください！</p>
+          <p>応募した旨を是非 Twitter にご投稿ください！</p>
           <ButtonWrapper>
             <a href={getTwitterIntentUrl(router.query.part)}>
               <Button variant="contained" color="primary" size="large">

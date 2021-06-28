@@ -133,7 +133,7 @@ const IndexPage = () => (
       <EntryShortcut>
         <Link href="/requirements/001">
           <Button variant="contained" color="primary" size="large">
-            奏者申込フォームへ
+            奏者応募フォームへ
           </Button>
         </Link>
       </EntryShortcut>
