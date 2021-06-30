@@ -93,6 +93,7 @@ const Page = () => {
   const [experience, setExperience] = useState("")
   const [otherSkills, setOtherSkills] = useState("")
   const [performance, setPerformance] = useState("")
+  const [comment, setComment] = useState("")
   const [agreed, setAgreed] = useState(false)
   const [reCaptcha, setReCaptcha] = useState<ReCaptchaInstance | null>(null)
 
@@ -270,6 +271,16 @@ const Page = () => {
                   label="所属団体・演奏イベントへの参加歴等"
                   value={performance}
                   onChange={(evt) => setPerformance(evt.currentTarget.value)}
+                />
+              </FormItemWrapper>
+              <FormItemWrapper>
+                <TextField
+                  multiline
+                  id="comment"
+                  name="entry.94204890"
+                  label="自由記入欄"
+                  value={comment}
+                  onChange={(evt) => setComment(evt.currentTarget.value)}
                 />
               </FormItemWrapper>
               <FormItemWrapper>
