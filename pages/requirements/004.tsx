@@ -68,7 +68,9 @@ const Page = () => (
             </Link>
           </NavigationButton>
           <NavigationButton>
-            <Link href="/entry">応募フォームへ ▷</Link>
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdx1dhIIVEX0DE7eeOQd_PexrjM-cWNHvhahSO7i7iS9iGh2Q/viewform?usp=sf_link">
+              応募フォームへ ▷
+            </Link>
           </NavigationButton>
         </Navigation>
       </RecruitmentBody>
