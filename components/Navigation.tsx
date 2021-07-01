@@ -12,6 +12,6 @@ export const NavigationButton = styled.button`
   padding: 0.5rem 1rem;
   border: 1px solid #eee;
   border-radius: 3px;
-  background-color: #eee;
-  color: #111;
+  background-color: #3f51b5;
+  color: #fff;
 `
