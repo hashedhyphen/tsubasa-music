@@ -26,7 +26,7 @@ export function RepertoireList() {
       </Repertoire>
       <Repertoire>
         <SongTitle>perfect slumbers</SongTitle>
-        <SongMeta>合唱（編曲・指揮：U. Jiro.）</SongMeta>
+        <SongMeta>合唱（編曲・指揮：U. Jiro）</SongMeta>
       </Repertoire>
       <Repertoire>
         <SongTitle>chocolate insomnia</SongTitle>
