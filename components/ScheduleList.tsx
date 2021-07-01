@@ -30,7 +30,7 @@ export function ScheduleList() {
       </Schedule>
       <Schedule>
         <Date>2022-03-21（祝）</Date>
-        <Note>演奏会本番（関東圏内）</Note>
+        <Note>関係者限定演奏会本番（関東圏内）</Note>
       </Schedule>
     </ul>
   )

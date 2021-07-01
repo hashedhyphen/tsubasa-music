@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import Layout from "../components/Layout"
 import { theme } from "../lib/theme"
 import { ExternalLink } from "../components/ExternalLink"
+import { Important } from "../components/Important"
 
 const HeaderWrapper = styled.div`
   padding: 2rem 1rem;
@@ -45,7 +46,7 @@ function getTwitterIntentUrl(part: string | string[]) {
     "text",
     `
 #浪白公園音樂團 楽劇《つばさミュージック》に ${part} で応募しました！
-https://music.羽川翼.com/
+https://music.xn--5rty76epfa.com/
     `.trim()
   )
   return `https://twitter.com/intent/tweet?${usp}`
@@ -56,22 +57,32 @@ export default function () {
 
   return (
     <ThemeProvider theme={theme}>
-      <Layout titlePrefix="奏者申込完了">
+      <Layout titlePrefix="メールをご確認ください">
         <HeaderWrapper>
-          <Header>奏者申込完了</Header>
+          <Header>メールをご確認ください</Header>
         </HeaderWrapper>
         <Body>
-          <p>お申し込みありがとうございました。</p>
+          <p>お申し込みありがとうございました！</p>
           <p>
-            奏者申込完了のメールが届いていない場合は
+            <Important>
+              応募完了メールの受信をもって、正式に応募完了となります。
+            </Important>
+          </p>
+          <p>
+            応募完了メールが 5
+            分以内に届いていない場合、応募が受理されていない可能性があります。
+          </p>
+          <p>
+            応募完了メールが届いていない場合は
             <ExternalLink href="mailto:xxxxparkorche@gmail.com">
               xxxxparkorche[at]gmail.com
             </ExternalLink>
             までご連絡ください。
           </p>
+          <p>応募した旨を是非 Twitter にご投稿ください！</p>
           <ButtonWrapper>
             <a href={getTwitterIntentUrl(router.query.part)}>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" size="large">
                 <Message>Twitter に投稿</Message>
               </Button>
             </a>
