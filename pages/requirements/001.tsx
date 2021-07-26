@@ -169,7 +169,7 @@ const Page = () => (
               <Instrument>合唱（SATB）</Instrument>
               <Instrument>Piccolo / Flute</Instrument>
               <Instrument>Oboe</Instrument>
-              <Instrument>Basson</Instrument>
+              <Instrument>Bassoon</Instrument>
               <Instrument>Clarinet（B♭・Bass）</Instrument>
               <Instrument>Saxophone（Alto・Tenor・Bari.）</Instrument>
               <Instrument>Trumpet</Instrument>
