@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { /*Button,*/ ThemeProvider } from "@material-ui/core"
-// import Link from "next/link"
+import { Button, ThemeProvider } from "@material-ui/core"
+import Link from "next/link"
 
 import Layout from "../components/Layout"
 import { BiographyList } from "../components/BiographyList"
@@ -11,19 +11,19 @@ import { SplashScreen } from "../components/SplashScreen"
 import { Title } from "../components/Title"
 import { theme } from "../lib/theme"
 
-// const EntryShortcut = styled.div`
-//   @media screen and (max-width: 480px) {
-//     position: fixed;
-//     right: 0.5rem;
-//     bottom: 1rem;
-//   }
-//   @media screen and (min-width: 481px) {
-//     position: relative;
-//     padding-bottom: 2rem;
-//     width: 100%;
-//     text-align: center;
-//   }
-// `
+const EntryShortcut = styled.div`
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 1rem;
+  }
+  @media screen and (min-width: 481px) {
+    position: relative;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+`
 
 const Section = styled.section`
   width: 100%;
@@ -130,7 +130,6 @@ const IndexPage = () => (
         ファンによる非公式演奏企画です
       </Notice>
 
-      {/*
       <EntryShortcut>
         <Link href="/requirements/001">
           <Button variant="contained" color="primary" size="large">
@@ -138,7 +137,6 @@ const IndexPage = () => (
           </Button>
         </Link>
       </EntryShortcut>
-      */}
 
       <ConceptArt />
 
