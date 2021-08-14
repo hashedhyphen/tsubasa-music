@@ -152,34 +152,20 @@ const Page = () => (
             現在の募集ステータス
           </RecruitmentSectionHeader>
           <RecruitmentSectionBody>
-            <p>一次募集（～2021-07-31）</p>
-            <p>
-              ※先着順ではありません。募集期間終了後、参加の可否を運営よりメールでご連絡いたします。
-            </p>
+            <p>二次募集（先着順）</p>
           </RecruitmentSectionBody>
         </RecruitmentSection>
         <RecruitmentSection>
           <RecruitmentSectionHeader>募集パート</RecruitmentSectionHeader>
           <RecruitmentSectionBody>
-            <p>
-              吹奏楽奏者は 2/19 の "perfect slumbers"
-              合唱制作へ参加可能です（参加費据え置き）。
-            </p>
+            <p>残り人数は 8/14 時点です。</p>
             <InstrumentList>
-              <Instrument>合唱（SATB）</Instrument>
-              <Instrument>Piccolo / Flute</Instrument>
-              <Instrument>Oboe</Instrument>
-              <Instrument>Bassoon</Instrument>
-              <Instrument>Clarinet（B♭・Bass）</Instrument>
-              <Instrument>Saxophone（Alto・Tenor・Bari.）</Instrument>
-              <Instrument>Trumpet</Instrument>
-              <Instrument>Horn</Instrument>
-              <Instrument>Trombone（Tenor・Bass）</Instrument>
-              <Instrument>Euphonium</Instrument>
-              <Instrument>Tuba</Instrument>
-              <Instrument>Electric Bass</Instrument>
-              <Instrument>Percussion（Drums 以外）</Instrument>
+              <Instrument>合唱 Soprano（残 4）</Instrument>
+              <Instrument>合唱 Alto（残 5）</Instrument>
+              <Instrument>合唱 Tenor（残 5）</Instrument>
+              <Instrument>合唱 Bass（残 4）</Instrument>
             </InstrumentList>
+            <p>（吹奏楽奏者の募集は終了いたしました）</p>
           </RecruitmentSectionBody>
         </RecruitmentSection>
         <Navigation>
