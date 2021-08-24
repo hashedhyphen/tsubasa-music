@@ -158,7 +158,7 @@ const Page = () => (
         <RecruitmentSection>
           <RecruitmentSectionHeader>募集パート</RecruitmentSectionHeader>
           <RecruitmentSectionBody>
-            <p>残り人数は 8/20 時点です。</p>
+            <p>残り人数は 8/24 時点です。</p>
             <InstrumentList>
               <Instrument>合唱 Soprano（残 3）</Instrument>
               <Instrument>合唱 Alto（残 4）</Instrument>
