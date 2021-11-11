@@ -162,7 +162,7 @@ const Page = () => (
             <InstrumentList>
               <Instrument>合唱 Soprano（残 1）</Instrument>
               <Instrument>合唱 Alto（残 3）</Instrument>
-              <Instrument>合唱 Tenor（残 2）</Instrument>
+              <Instrument>合唱 Tenor（残 1）</Instrument>
               <Instrument>合唱 Bass（残 1）</Instrument>
             </InstrumentList>
             <p>（吹奏楽奏者の募集は終了いたしました）</p>
