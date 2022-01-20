@@ -102,10 +102,7 @@ const Page = () => (
           <DefContent>
             <ul>
               <li>
-                <time dateTime="2022-02-19">2022-02-19</time>（合唱）
-              </li>
-              <li>
-                <time dateTime="2022-03-06">2022-03-06</time>（吹奏楽）
+                <time dateTime="2022-03-06">2022-03-06</time>（合唱・吹奏楽）
               </li>
               <li>
                 <time dateTime="2022-03-21">2022-03-21</time>（合唱・吹奏楽）
